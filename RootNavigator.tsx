@@ -12,8 +12,14 @@ import CartScreen from "./screens/CartScreen";
 import ProfileScreen from "./screens/ProfileScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import CustomBottomTab from "./components/CustomBottomTab";
+import SplashScreen from "./screens/SplashScreen";
+import OnboardingScreen from "./screens/OnboardingScreen";
+import LoginScreen from "./screens/LoginScreen";
 
 export type RootStackParamList = {
+  Splash: undefined;
+  Onboarding: undefined;
+  Login: undefined;
   Home: undefined;
   Exchange: undefined;
   Cart: undefined;
@@ -44,7 +50,14 @@ const RoootNavigator = () => {
   };
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator initialRouteName="Splash">
+        <Stack.Screen
+          name="Splash"
+          component={SplashScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen name="Onboarding" component={OnboardingScreen} />
+        <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen
           name="Main"
           component={BottomTabNavigator}

@@ -10,7 +10,6 @@ interface Props {
 }
 
 const BottomTabIcon = ({ route, isFocused }: Props) => {
-  // eslint-disable-next-line @typescript-eslint/no-shadow
   const renderIcon = (route: string, isFocused: boolean) => {
     let height: number = 34;
     let width: number = 34;
@@ -23,7 +22,6 @@ const BottomTabIcon = ({ route, isFocused }: Props) => {
             width={width}
             height={height}
             size={25}
-            color="white"
             fill={isFocused ? "#0067FF" : "#ffffff"}
           />
         );
@@ -34,7 +32,6 @@ const BottomTabIcon = ({ route, isFocused }: Props) => {
             width={width}
             height={height}
             size={25}
-            color="white"
             fill={isFocused ? "#0067FF" : "#ffffff"}
           />
         );
@@ -45,7 +42,6 @@ const BottomTabIcon = ({ route, isFocused }: Props) => {
             width={width}
             height={height}
             size={25}
-            color="white"
             fill={isFocused ? "#0067FF" : "#ffffff"}
           />
         );
@@ -56,7 +52,6 @@ const BottomTabIcon = ({ route, isFocused }: Props) => {
             width={width}
             height={height}
             size={25}
-            color="white"
             fill={isFocused ? "#0067FF" : "#ffffff"}
           />
         );

@@ -1,4 +1,3 @@
-/* eslint-disable react-native/no-inline-styles */
 import {
   Pressable,
   StyleSheet,
@@ -20,8 +19,6 @@ const CustomBottomTab = ({
   descriptors,
   navigation,
 }: BottomTabBarProps) => {
-  // I'm using the inset from react-native-safe-area-context as the bottom value.
-  // If you're not using react-native-safe-area-context, you can change it according to your needs.
   const insets = useSafeAreaInsets();
   const { width } = useWindowDimensions();
   const MARGIN = 20;
@@ -63,7 +60,6 @@ const CustomBottomTab = ({
           });
 
           if (!isFocused && !event.defaultPrevented) {
-            // The `merge: true` option makes sure that the params inside the tab screen are preserved
             navigation.navigate(route.name, { merge: true });
           }
         };
@@ -114,7 +110,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     marginBottom: 10,
     alignSelf: "center",
-    backgroundColor: "#0067FF",
+    backgroundColor: "#4838D1",
     borderRadius: 100,
     alignItems: "center",
     justifyContent: "space-around",
