@@ -1,14 +1,17 @@
-import { StyleSheet, Text, View } from "react-native";
-import React, { useEffect, useState } from "react";
+import { StyleSheet, Text, useWindowDimensions, View } from "react-native";
+import React, { useEffect, useRef, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { RootStackParamList } from "../RootNavigator";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import LottieView from "lottie-react-native";
 
 export type OnboardingProps = {
   Onboarding: undefined;
 };
 
 const SplashScreen = () => {
+  const { width: SCREEN_WIDTH } = useWindowDimensions();
+  const animation = useRef(null);
   const navigation =
     useNavigation<
       NativeStackNavigationProp<RootStackParamList, "Onboarding">
@@ -18,7 +21,7 @@ const SplashScreen = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShouldNavigate(true);
-    }, 2000);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -31,6 +34,17 @@ const SplashScreen = () => {
 
   return (
     <View style={styles.container}>
+      <View>
+        <LottieView
+          autoPlay
+          ref={animation}
+          style={{
+            width: SCREEN_WIDTH * 0.9,
+            height: SCREEN_WIDTH * 0.9,
+          }}
+          source={require("../assets/animations/Lottie1.json")}
+        />
+      </View>
       <Text style={styles.text}>
         <Text style={styles.share}>Share</Text>
         <Text style={styles.it}>it.</Text>
