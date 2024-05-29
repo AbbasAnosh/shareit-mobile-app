@@ -1,4 +1,3 @@
-import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import React from "react";
 import {
@@ -14,13 +13,13 @@ import {
   ScrollView,
 } from "react-native";
 import { RootStackParamList } from "../RootNavigator";
+import { useNavigation } from "@react-navigation/native";
 
-const LoginScreen = () => {
+const RegisterScreen = () => {
   const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = useWindowDimensions();
   const CIRCLE_DIAMETER = SCREEN_WIDTH * 2;
-
   const navigation =
-    useNavigation<NativeStackNavigationProp<RootStackParamList, "Register">>();
+    useNavigation<NativeStackNavigationProp<RootStackParamList, "Login">>();
 
   return (
     <KeyboardAvoidingView
@@ -52,52 +51,37 @@ const LoginScreen = () => {
           </View>
         </View>
         <View style={styles.bottomContainer}>
-          <Text style={styles.loginText}>Login</Text>
+          <Text style={styles.loginText}>Create Account</Text>
+          <View style={styles.googleContainer}>
+            <Image
+              style={styles.tinyLogo}
+              source={require("../assets/images/google.png")}
+            />
+            <Text style={styles.gooleText}>Continue with Google</Text>
+          </View>
+          <Text>OR</Text>
           <View style={styles.inputContainer}>
-            <TextInput style={styles.input} placeholder="Enter your email" />
+            <TextInput style={styles.input} placeholder="Email" />
+            <TextInput style={styles.input} placeholder="Username" />
             <TextInput
               style={styles.input}
-              placeholder="Enter password"
+              placeholder="Password"
               secureTextEntry
             />
           </View>
-          <View style={styles.rememberMeContainer}>
-            <Text style={styles.rememberMeText}>Remember me</Text>
-            <Text style={styles.forgotPasswordText}>Forget Password?</Text>
-          </View>
+
           <TouchableOpacity style={styles.loginButton}>
-            <Text style={styles.loginButtonText}>Login</Text>
+            <Text style={styles.loginButtonText}>Continue</Text>
           </TouchableOpacity>
-          <Text style={styles.orLoginWithText}>Or Login with</Text>
-          <View style={styles.socialIconsContainer}>
-            <TouchableOpacity style={styles.socialIcon}>
-              <Image
-                source={require("../assets/images/apple.png")}
-                style={styles.tinyLogo}
-              />
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.socialIcon}>
-              <Image
-                source={require("../assets/images/google.png")}
-                style={styles.tinyLogo}
-              />
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.socialIcon}>
-              <Image
-                source={require("../assets/images/facebook.png")}
-                style={styles.tinyLogo}
-              />
-            </TouchableOpacity>
-          </View>
           <Text style={styles.registerText}>
-            Don’t have an account?{" "}
+            Have an account?{" "}
             <Text
-              onPress={() => {
-                navigation.navigate("Register");
-              }}
               style={styles.registerLink}
+              onPress={() => {
+                navigation.navigate("Login");
+              }}
             >
-              Register
+              Login
             </Text>
           </Text>
         </View>
@@ -106,7 +90,7 @@ const LoginScreen = () => {
   );
 };
 
-export default LoginScreen;
+export default RegisterScreen;
 
 const styles = StyleSheet.create({
   container: {
@@ -158,9 +142,22 @@ const styles = StyleSheet.create({
     width: "100%",
     marginBottom: 20,
   },
+  googleContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#F3F3F3",
+    padding: 10,
+    borderRadius: 50,
+    width: "100%",
+  },
+  gooleText: {
+    marginLeft: 50,
+    color: "#CBCBCB",
+  },
   input: {
     width: "100%",
-    padding: 15,
+    padding: 12,
     marginBottom: 10,
     backgroundColor: "#F3F3F3",
     borderRadius: 50,

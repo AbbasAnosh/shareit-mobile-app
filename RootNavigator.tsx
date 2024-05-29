@@ -15,11 +15,13 @@ import CustomBottomTab from "./components/CustomBottomTab";
 import SplashScreen from "./screens/SplashScreen";
 import OnboardingScreen from "./screens/OnboardingScreen";
 import LoginScreen from "./screens/LoginScreen";
+import RegisterScreen from "./screens/CreateAccountScreen";
 
 export type RootStackParamList = {
   Splash: undefined;
   Onboarding: undefined;
   Login: undefined;
+  Register: undefined;
   Home: undefined;
   Exchange: undefined;
   Cart: undefined;
@@ -64,6 +66,11 @@ const RoootNavigator = () => {
         <Stack.Screen
           name="Login"
           component={LoginScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Register"
+          component={RegisterScreen}
           options={{ headerShown: false }}
         />
         <Stack.Screen
