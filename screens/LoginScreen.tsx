@@ -66,7 +66,14 @@ const LoginScreen = () => {
             <Text style={styles.forgotPasswordText}>Forget Password?</Text>
           </View>
           <TouchableOpacity style={styles.loginButton}>
-            <Text style={styles.loginButtonText}>Login</Text>
+            <Text
+              style={styles.loginButtonText}
+              onPress={() => {
+                navigation.navigate("Main");
+              }}
+            >
+              Login
+            </Text>
           </TouchableOpacity>
           <Text style={styles.orLoginWithText}>Or Login with</Text>
           <View style={styles.socialIconsContainer}>
