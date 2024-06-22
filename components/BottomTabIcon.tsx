@@ -11,8 +11,8 @@ interface Props {
 
 const BottomTabIcon = ({ route, isFocused }: Props) => {
   const renderIcon = (route: string, isFocused: boolean) => {
-    let height: number = 34;
-    let width: number = 34;
+    let height: number = 20;
+    let width: number = 20;
 
     switch (route) {
       case "Home":
@@ -21,7 +21,7 @@ const BottomTabIcon = ({ route, isFocused }: Props) => {
             name="home"
             width={width}
             height={height}
-            size={25}
+            size={20}
             // fill={isFocused ? "#0067FF" : "#ffffff"}
             color={isFocused ? "#0067FF" : "#ffffff"}
           />
@@ -32,7 +32,7 @@ const BottomTabIcon = ({ route, isFocused }: Props) => {
             name="exchange"
             width={width}
             height={height}
-            size={25}
+            size={20}
             // fill={isFocused ? "#0067FF" : "#ffffff"}
             color={isFocused ? "#0067FF" : "#ffffff"}
           />
@@ -43,7 +43,7 @@ const BottomTabIcon = ({ route, isFocused }: Props) => {
             name="shoppingcart"
             width={width}
             height={height}
-            size={25}
+            size={20}
             // fill={isFocused ? "#0067FF" : "#ffffff"}
             color={isFocused ? "#0067FF" : "#ffffff"}
           />
@@ -54,7 +54,7 @@ const BottomTabIcon = ({ route, isFocused }: Props) => {
             name="person-outline"
             width={width}
             height={height}
-            size={25}
+            size={20}
             // fill={isFocused ? "#0067FF" : "#ffffff"}
             color={isFocused ? "#0067FF" : "#ffffff"}
           />

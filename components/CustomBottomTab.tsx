@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
   tabBarContainer: {
     flex: 1,
     flexDirection: "row",
-    height: 90,
+    height: 70,
     position: "absolute",
     marginBottom: 10,
     alignSelf: "center",
@@ -122,8 +122,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   slidingTab: {
-    width: 70,
-    height: 70,
+    width: 50,
+    height: 50,
     borderRadius: 100,
     backgroundColor: "white",
   },

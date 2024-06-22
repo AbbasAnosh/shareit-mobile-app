@@ -1,10 +1,13 @@
 import { View, Text, ScrollView, StyleSheet, Image } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { FontAwesome5 } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
+import SearchBar from "../components/SearchBar";
+import CarouselComponent from "../components/Carousel";
+import CarouselBook from "../components/Carousel";
 
 const HomeScreen = () => {
+  const [clicked, setCLicked] = useState("");
   return (
     <SafeAreaView>
       <ScrollView>
@@ -31,6 +34,9 @@ const HomeScreen = () => {
             <Ionicons name="notifications-outline" size={24} color="black" />
           </View>
         </View>
+
+        <SearchBar setCLicked={setCLicked} clicked={clicked} />
+        <CarouselBook />
       </ScrollView>
     </SafeAreaView>
   );
@@ -43,9 +49,8 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    paddingVertical: 20,
-    paddingHorizontal: 20,
-    marginBottom: 20,
+    paddingVertical: 10,
+    paddingHorizontal: 15,
   },
   greeting: {
     fontSize: 24,
