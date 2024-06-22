@@ -22,7 +22,8 @@ const BottomTabIcon = ({ route, isFocused }: Props) => {
             width={width}
             height={height}
             size={25}
-            fill={isFocused ? "#0067FF" : "#ffffff"}
+            // fill={isFocused ? "#0067FF" : "#ffffff"}
+            color={isFocused ? "#0067FF" : "#ffffff"}
           />
         );
       case "Exchange":
@@ -32,7 +33,8 @@ const BottomTabIcon = ({ route, isFocused }: Props) => {
             width={width}
             height={height}
             size={25}
-            fill={isFocused ? "#0067FF" : "#ffffff"}
+            // fill={isFocused ? "#0067FF" : "#ffffff"}
+            color={isFocused ? "#0067FF" : "#ffffff"}
           />
         );
       case "Cart":
@@ -42,7 +44,8 @@ const BottomTabIcon = ({ route, isFocused }: Props) => {
             width={width}
             height={height}
             size={25}
-            fill={isFocused ? "#0067FF" : "#ffffff"}
+            // fill={isFocused ? "#0067FF" : "#ffffff"}
+            color={isFocused ? "#0067FF" : "#ffffff"}
           />
         );
       case "Profile":
@@ -52,7 +55,8 @@ const BottomTabIcon = ({ route, isFocused }: Props) => {
             width={width}
             height={height}
             size={25}
-            fill={isFocused ? "#0067FF" : "#ffffff"}
+            // fill={isFocused ? "#0067FF" : "#ffffff"}
+            color={isFocused ? "#0067FF" : "#ffffff"}
           />
         );
       default:

@@ -70,7 +70,12 @@ const RegisterScreen = () => {
             />
           </View>
 
-          <TouchableOpacity style={styles.loginButton}>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate("Main");
+            }}
+            style={styles.loginButton}
+          >
             <Text style={styles.loginButtonText}>Continue</Text>
           </TouchableOpacity>
           <Text style={styles.registerText}>
