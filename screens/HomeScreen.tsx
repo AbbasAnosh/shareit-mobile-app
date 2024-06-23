@@ -3,11 +3,17 @@ import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import SearchBar from "../components/SearchBar";
-import CarouselComponent from "../components/Carousel";
 import CarouselBook from "../components/Carousel";
+import CategoryButtons from "../components/CategoryButton";
+import CategoryScroll from "../components/CategoryScroll";
 
 const HomeScreen = () => {
   const [clicked, setCLicked] = useState("");
+  const [activeCategory, setActiveCategory] = useState("Books");
+
+  const handleCategoryPress = (category) => {
+    setActiveCategory(category);
+  };
   return (
     <SafeAreaView>
       <ScrollView>
@@ -37,6 +43,17 @@ const HomeScreen = () => {
 
         <SearchBar setCLicked={setCLicked} clicked={clicked} />
         <CarouselBook />
+        <View style={styles.Category}>
+          <Text style={styles.CategoryName}>Category</Text>
+
+          <CategoryButtons
+            activeCategory={activeCategory}
+            onCategoryPress={handleCategoryPress}
+          />
+        </View>
+        <View style={styles.category_container}>
+          <CategoryScroll />
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
@@ -49,7 +66,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    paddingVertical: 10,
+    paddingVertical: 20,
     paddingHorizontal: 15,
   },
   greeting: {
@@ -82,5 +99,15 @@ const styles = StyleSheet.create({
     alignItems: "center",
     width: 50,
     height: 50,
+  },
+  Category: { paddingHorizontal: 15, marginBottom: 10 },
+  CategoryName: {
+    fontSize: 18,
+    fontWeight: "bold",
+    color: "#222227",
+    marginBottom: 10,
+  },
+  category_container: {
+    paddingHorizontal: 5,
   },
 });

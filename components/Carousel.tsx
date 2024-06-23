@@ -35,6 +35,13 @@ const carouselItems = [
     image:
       "https://images.pexels.com/photos/2187601/pexels-photo-2187601.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
+  {
+    title: "Call Me by Your Name",
+    description: "Call Me by Your Name is a great book to read",
+    button: "Buy Now",
+    image:
+      "https://images.pexels.com/photos/734968/pexels-photo-734968.jpeg?auto=compress&cs=tinysrgb&w=600",
+  },
 ];
 
 const CarouselBook = () => {
@@ -98,6 +105,7 @@ const styles = StyleSheet.create({
   headerText: {
     fontSize: 18,
     fontWeight: "bold",
+    color: "#222227",
   },
   seeAllText: {
     color: "blue",
