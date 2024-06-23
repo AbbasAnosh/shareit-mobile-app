@@ -37,8 +37,7 @@ const CategoryScroll = () => {
             <View style={styles.description}>
               <Text style={styles.tipTitle}>{item.name}</Text>
               <Text style={styles.tipText}>by {item.author}</Text>
-              <View>
-                {" "}
+              <View style={styles.Rating}>
                 <StarRating rating={item.rating} />
                 <Text style={styles.ratingText}>({item.rating})</Text>
               </View>
@@ -67,19 +66,22 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     width: 370,
     height: 150,
-    elevation: 3, // Add shadow for Android
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.8,
-    shadowRadius: 2,
+    padding: 5,
+  },
+  Rating: {
+    flexDirection: "row",
+    alignItems: "center",
   },
   tipImage: {
-    width: 90,
+    width: 120,
     height: "100%",
+    resizeMode: "contain",
   },
   description: {
     padding: 10,
-    justifyContent: "center",
+    // justifyContent: "center",
+    flexDirection: "column",
+    gap: 5,
     flex: 1,
   },
   tipTitle: {
@@ -97,8 +99,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   star: {
-    fontSize: 16, // Adjust the size of the star here
-    color: "#FFD700", // Gold color
+    fontSize: 16,
+    color: "#FFD700",
     marginRight: 2,
   },
   ratingText: {
