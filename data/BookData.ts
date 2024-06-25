@@ -44,3 +44,31 @@ export const BookData = [
       "You can go after the job you want...and get it! You can take the job you have...and improve it! You can take any situation you're in...and make it work for you!",
   },
 ];
+
+export const TopWriter = [
+  {
+    id: 1,
+    image:
+      "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1654371463i/18144590.jpg",
+  },
+  {
+    id: 2,
+    image:
+      "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1689947880i/6708.jpg",
+  },
+  {
+    id: 3,
+    image:
+      "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1442726934i/4865.jpg",
+  },
+  {
+    id: 4,
+    image:
+      "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1421842784i/36072.jpg",
+  },
+  {
+    id: 5,
+    image:
+      "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1442957271i/368593.jpg",
+  },
+];

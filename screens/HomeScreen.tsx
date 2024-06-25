@@ -6,6 +6,7 @@ import SearchBar from "../components/SearchBar";
 import CarouselBook from "../components/Carousel";
 import CategoryButtons from "../components/CategoryButton";
 import CategoryScroll from "../components/CategoryScroll";
+import Writer from "../components/Writer";
 
 const HomeScreen = () => {
   const [clicked, setCLicked] = useState("");
@@ -54,6 +55,7 @@ const HomeScreen = () => {
         <View style={styles.category_container}>
           <CategoryScroll />
         </View>
+        <Writer />
       </ScrollView>
     </SafeAreaView>
   );
