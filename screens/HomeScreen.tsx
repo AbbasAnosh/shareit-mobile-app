@@ -16,7 +16,7 @@ const HomeScreen = () => {
     setActiveCategory(category);
   };
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{ marginBottom: 70 }}>
       <ScrollView>
         <View style={styles.header}>
           <View style={styles.headerRight}>

@@ -72,3 +72,14 @@ export const TopWriter = [
       "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1442957271i/368593.jpg",
   },
 ];
+
+export const BookCategory = [
+  "Design",
+  "Science",
+  "Business",
+  "Technology",
+  "Art",
+  "LifeStyle",
+  "Education",
+  "Engineering",
+];

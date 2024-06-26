@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet } from "react-native";
 import React from "react";
 
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -16,6 +16,7 @@ import SplashScreen from "./screens/SplashScreen";
 import OnboardingScreen from "./screens/OnboardingScreen";
 import LoginScreen from "./screens/LoginScreen";
 import RegisterScreen from "./screens/CreateAccountScreen";
+import { AntDesign } from "@expo/vector-icons";
 
 export type RootStackParamList = {
   Splash: undefined;
@@ -39,17 +40,33 @@ const RoootNavigator = () => {
 
   const BottomTabNavigator = () => {
     return (
-      <Tab.Navigator
-        tabBar={CustomBottomTabs}
-        screenOptions={{ headerShown: false }}
-      >
-        <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Exchange" component={ExchangeScreen} />
-        <Tab.Screen name="Cart" component={CartScreen} />
-        <Tab.Screen name="Profile" component={ProfileScreen} />
+      <Tab.Navigator tabBar={CustomBottomTabs}>
+        <Tab.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{ headerShown: false }}
+        />
+        <Tab.Screen
+          name="Exchange"
+          component={ExchangeScreen}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Tab.Screen
+          name="Cart"
+          component={CartScreen}
+          options={{ headerShown: false }}
+        />
+        <Tab.Screen
+          name="Profile"
+          component={ProfileScreen}
+          options={{ headerShown: false }}
+        />
       </Tab.Navigator>
     );
   };
+
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Splash">
